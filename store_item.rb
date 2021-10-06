@@ -20,6 +20,12 @@ class Item
   end
 end
 
+class Food < Item
+  def initialize
+    @shelf_life = "2 Years"
+  end
+end
+
 item = Item.new(inventory[0])
 item2 = Item.new(inventory[1])
 item3 = Item.new(inventory[2])
