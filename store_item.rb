@@ -22,6 +22,7 @@ end
 
 class Food < Item
   def initialize
+    super
     @shelf_life = "2 Years"
   end
 end
