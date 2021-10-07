@@ -65,7 +65,8 @@ def list_grade(exam_one, exam_two, exam_three)
 end
 
 def average_grade(exam_one, exam_two, exam_three)
-  @average = (exam_one + exam_two + exam_three / 3).to_i
+  @average = ((exam_one + exam_two + exam_three) / 3).to_i
+  return @average
 end
 
 def letter_grade(average_grade)
@@ -83,7 +84,7 @@ def letter_grade(average_grade)
 end
 
 def pass_fail(average)
-  if @average < 59
+  if average < 59
     puts "Student is failing."
   else
     puts "Student is passing."
