@@ -15,6 +15,10 @@ class Employee
   def give_annual_raise
     @salary = 1.05 * @salary
   end
+
+  def fire
+    @active = false
+  end
 end
 
 employee1 = Employee.new({ first_name: "Majora", last_name: "Carter", salary: 80000, active: true })
@@ -45,6 +49,10 @@ class Manager < Employee
       employee.active = false
     end
   end
+
+  def fire
+    super
+  end
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
@@ -62,3 +70,7 @@ puts employee1.active
 manager.fire_all_employees
 puts employee1.active
 puts employee1.active
+
+puts manager.active
+manager.fire
+puts manager.active
