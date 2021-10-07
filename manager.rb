@@ -1,6 +1,5 @@
 class Employee
-  attr_reader :first_name, :last_name, :salary, :active
-  attr_writer :active
+  attr_accessor :first_name, :last_name, :salary, :active
 
   def initialize(input_options)
     @first_name = input_options[:first_name]
