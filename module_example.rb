@@ -1,4 +1,6 @@
 module VehicleTraits
+  attr_accessor :speed, :direction
+
   def initialize
     @speed = 0
     @direction = "north"
@@ -32,3 +34,14 @@ class Bike
     puts "Ring ring!"
   end
 end
+
+bike = Bike.new
+car = Car.new
+
+puts car.speed
+car.honk_horn
+
+bike.direction = "West"
+
+puts bike.direction
+bike.ring_bell
