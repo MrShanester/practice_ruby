@@ -81,8 +81,12 @@ def find_combo(file)
     end
   end
 
-  return winner_winner_chicken_dinner
+  if correct_permutations.empty?
+    return "No Combinations Equal Target Price. Sorry."
+  else
+    return winner_winner_chicken_dinner
+  end
 
 end
 
-p find_combo("price.csv")
+p find_combo(ARGV[0])
